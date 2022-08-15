@@ -8,7 +8,7 @@ public class Day2 {
 
     public static void part1() {
 
-        File file = new File("src\\Day2\\sample.txt");
+        File file = new File("src\\Day2\\input.txt");
         Scanner reader;
 
         try {
