@@ -19,7 +19,7 @@ public class Day1 {
         int increases = 0;
         int previous = reader.nextInt();
         int current;
-        //System.out.println(previous);
+
         do {
             current = reader.nextInt();
 
@@ -35,6 +35,35 @@ public class Day1 {
     }
 
     public static void part2() {
-        System.out.println("Hello from Day 1 Part 2");
+        File file = new File("src\\Day1\\input.txt");
+        Scanner reader;
+
+        try{
+            reader = new Scanner(file);
+        } catch(FileNotFoundException e) {
+            System.out.println("File not found. Aborting");
+            return;
+        }
+
+        int increases = 0;
+        int a = reader.nextInt();
+        int b = reader.nextInt();
+        int c = reader.nextInt();
+        int d;
+        
+        do {
+            d = reader.nextInt();
+
+            if(b + c + d > a + b + c) {
+                increases++;
+            }
+
+            a = b;
+            b = c;
+            c = d;
+        } while(reader.hasNextInt());
+        reader.close();
+
+        System.out.println(increases);
     }
 }

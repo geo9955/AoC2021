@@ -1,2 +1,3 @@
 *.class
+bin/App.class
 src/App.java
