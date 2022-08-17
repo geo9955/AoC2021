@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="263b49c6-ca0b-42ca-80d7-ddbad776398d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AoC 2021.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Day3/Day3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day3/Day3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day4/Day4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day4/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day4/sample.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,22 +65,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1660694573139">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1660768351587">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1660694573139" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1660694573139">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1660768351587" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1660768351587">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1660694573139" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1660694573139">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1660768351587" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1660768351586">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1660694573139" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1660694573139">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1660768351586" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1660768351587">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1660694573139" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1660768351587" />
     <state x="2612" y="243" key="RollbackChangesDialog" timestamp="1660685249516">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
