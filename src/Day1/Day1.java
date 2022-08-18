@@ -5,10 +5,12 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Day1 {
-    public static void part1() {
-        File file = new File("src\\Day1\\input.txt");
-        Scanner reader;
 
+    private static File file = new File("src\\Day1\\input.txt");
+    private static Scanner reader;
+    private static int increases = 0;
+
+    public static void part1() {
         try{
             reader = new Scanner(file);
         } catch(FileNotFoundException e) {
@@ -16,7 +18,6 @@ public class Day1 {
             return;
         }
 
-        int increases = 0;
         int previous = reader.nextInt();
         int current;
 
@@ -29,15 +30,13 @@ public class Day1 {
 
             previous = current;
         } while(reader.hasNextInt());
-        reader.close();
 
         System.out.println(increases);
+
+        reader.close();
     }
 
     public static void part2() {
-        File file = new File("src\\Day1\\input.txt");
-        Scanner reader;
-
         try{
             reader = new Scanner(file);
         } catch(FileNotFoundException e) {
@@ -45,7 +44,6 @@ public class Day1 {
             return;
         }
 
-        int increases = 0;
         int a = reader.nextInt();
         int b = reader.nextInt();
         int c = reader.nextInt();
@@ -54,16 +52,16 @@ public class Day1 {
         do {
             d = reader.nextInt();
 
-            if(b + c + d > a + b + c) {
+            if(b + c + d > a + b + c)
                 increases++;
-            }
 
             a = b;
             b = c;
             c = d;
         } while(reader.hasNextInt());
-        reader.close();
 
         System.out.println(increases);
+
+        reader.close();
     }
 }
