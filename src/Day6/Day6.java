@@ -2,18 +2,33 @@ package Day6;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Day6 {
 
-    private static File file = new File("src\\Day6\\input.txt");
-    private static Scanner reader;
-    private static int DAYS_TO_PASS = 80;
 
+
+    /*
+    Wrappers to pass the day's input to the logic
+     */
     public static void part1() {
+        final int DAYS_TO_PASS = 80;
+        processFish(DAYS_TO_PASS);
+    }
+
+    public static void part2() {
+        final int DAYS_TO_PASS = 256;
+        processFish(DAYS_TO_PASS);
+    }
+
+    /*
+    Instantiates an ArrayList of longs whose indices represent the number of Lanternfish with that many days left until
+    they spawn. For each day, every index's value is placed in the index below it (wrapping to 8 if at 0). A number of
+    fish equal to the spawned fish are added to 6, to represent the fish that did the spawning.
+     */
+    private static void processFish(final int DAYS_TO_PASS) {
+        File file = new File("src\\Day6\\input.txt");
+        Scanner reader;
         try{
             reader = new Scanner(file);
         } catch(FileNotFoundException e) {
@@ -21,56 +36,19 @@ public class Day6 {
             return;
         }
 
-        ArrayList<LanternFish> school = new ArrayList<>();
-        ArrayList<LanternFish> fishToAdd;
-        String[] initialDays = reader.nextLine().split(",");
-        Arrays.stream(initialDays).mapToInt(Integer::parseInt).forEach(daysToSpawn -> school.add(new LanternFish(daysToSpawn)));
+        ArrayList<Long> school = new ArrayList<>(Collections.nCopies(9, 0L));
+        int[] initialFish = Arrays.stream(reader.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
+        for(int fish : initialFish)
+            school.set(fish, school.get(fish) + 1);
 
         for(int i = 1; i <= DAYS_TO_PASS; i++) {
-            fishToAdd = new ArrayList<>();
-            for (LanternFish fish : school) {
-                fish.attemptToSpawn(fishToAdd);
-            }
-            school.addAll(fishToAdd);
+            Collections.rotate(school, -1);
+            school.set(6, school.get(6) + school.get(8));
         }
 
-        System.out.println("The school has reached a size of " + school.size() + " fish.");
+        long population = school.stream().mapToLong(Long::longValue).sum();
+        System.out.println("The school has reached a size of " + population + " fish.");
 
-
-        //int[] startingFish = Arrays.stream(fishInput.split(",")).mapToInt(Integer::parseInt).toArray();
-        //ArrayList<LanternFish> school = new ArrayList<>();
-        //for(int daysToSpawn : startingFish)
-        //    school.add(new LanternFish(daysToSpawn));
         reader.close();
-    }
-
-    public static void part2() {
-
-    }
-}
-
-class LanternFish {
-    private int daysToSpawn;
-
-    public LanternFish() {
-        daysToSpawn = 8;
-    }
-
-    public LanternFish(int daysToSpawn) {
-        this.daysToSpawn = daysToSpawn;
-    }
-
-    public void attemptToSpawn(List<LanternFish> fish) {
-        if(daysToSpawn == 0) {
-            fish.add(new LanternFish());
-            daysToSpawn = 6;
-        }
-
-        else
-            daysToSpawn--;
-    }
-
-    public int getDaysToSpawn() {
-        return daysToSpawn;
     }
 }
